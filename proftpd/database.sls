@@ -36,9 +36,11 @@
             SQLNamedQuerylogin: {{ salt['pillar.get']('proftpd:SQL:SQLNamedQuery:login') }}
             SQLNamedQuerydownload: {{ salt['pillar.get']('proftpd:SQL:SQLNamedQuery:download') }}
             SQLNamedQueryupload: {{ salt['pillar.get']('proftpd:SQL:SQLNamedQuery:upload') }}
+            SQLNamedQuerylogout: {{ salt['pillar.get']('proftpd:SQL:SQLNamedQuery:logout') }}
             SQLLogPASS: {{ salt['pillar.get']('proftpd:SQL:SQLLog:PASS') }}
             SQLLogRETR: {{ salt['pillar.get']('proftpd:SQL:SQLLog:RETR') }}
             SQLLogSTOR: {{ salt['pillar.get']('proftpd:SQL:SQLLog:STOR') }}
+            SQLLogEXIT: {{ salt['pillar.get']('proftpd:SQL:SQLLog:EXIT') }}
 
 {{ proftpd.modules_config }}:
   file.append:
