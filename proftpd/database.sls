@@ -41,6 +41,7 @@
             SQLLogRETR: {{ salt['pillar.get']('proftpd:SQL:SQLLog:RETR') }}
             SQLLogSTOR: {{ salt['pillar.get']('proftpd:SQL:SQLLog:STOR') }}
             SQLLogEXIT: {{ salt['pillar.get']('proftpd:SQL:SQLLog:EXIT') }}
+            RequireValidShell: {{ salt['pillar.get']('proftpd:SQL:RequireValidShell') }}
 
 {{ proftpd.modules_config }}:
   file.append:
