@@ -8,8 +8,9 @@
   pkg:
     - installed
 
-{{ proftpd.config }}:
+proftpd_config_append:
   file.append:
+    - name: {{ proftpd.config }}:
     - text:
         - Include /etc/proftpd/sql.conf
 
