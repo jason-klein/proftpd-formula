@@ -24,6 +24,7 @@ proftpd:
             UseIPv6: {{ salt['pillar.get']('proftpd:UseIPv6', '"off"') }}
             Port: {{ salt['pillar.get']('proftpd:Port', 21) }}
             PassivePorts: {{ salt['pillar.get']('proftpd:PassivePorts', '49152 65534') }}
+            MasqueradeAddress: {{ salt['pillar.get']('proftpd:MasqueradeAddress') }}
             MaxInstances: {{ salt['pillar.get']('proftpd:MaxInstances') }}
             DeferWelcome: {{ salt['pillar.get']('proftpd:DeferWelcome') }}
             MultilineRFC2228: {{ salt['pillar.get']('proftpd:MultilineRFC2228') }}
